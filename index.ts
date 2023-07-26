@@ -77,6 +77,20 @@ let student4:AdvancedInterfaceStudent={
 function getSum(arr:number[]):number{
     return arr.reduce((acc,num)=>acc+num,0);
 }
+
+/*
+еще варианты
+let sum =0;
+  arr.forEach((num)=>{
+    sum += num;
+  });
+
+   let sum = 0; 
+     for(let i=0;i<arr.length;i++){
+        sum = sum + arr[i];
+     }
+     return sum;
+*/
 //console.log(getSum([3,5,2]));
 
 
@@ -94,6 +108,17 @@ function getSum(arr:number[]):number{
         return 300;
     }
  }
+ /*
+ function getCode(str:"cash"|"card"|"bank transfer"):100|200|300 {
+    switch(str){
+        case "cash": return 100;
+        case "card": return 200;
+        case "bank transfer": return 300;
+    }
+    
+}
+ */
+
    //console.log(getCode("bank transfer"));
    //console.log(getCode("cash"));
    //console.log(getCode("card"));
@@ -104,7 +129,7 @@ function getSum(arr:number[]):number{
 Создать переменную этого типа, в которую положить функцию написанную на шаге 3. Вызвать ее.
 */
 
-type FunctionForArray = (num:number[])=>number;
+type FunctionForArray = (arr: number[])=>number;
 let func:FunctionForArray = getSum;
 
 console.log(func([12,43,5]));
